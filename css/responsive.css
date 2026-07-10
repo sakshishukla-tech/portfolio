@@ -1,0 +1,291 @@
+/* 
+========================================================================
+   RESPONSIVE.CSS - Breakpoints & Mobile Adaptations
+   Sakshi Shukla - Portfolio Website
+======================================================================== 
+*/
+
+/* 1. EXTRA LARGE SCREENS (MIN 1400px) */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+/* 2. DESKTOPS & LAPTOPS (MAX 1200px) */
+@media (max-width: 1200px) {
+    .hero-grid {
+        gap: 3rem;
+    }
+    
+    .about-grid {
+        gap: 3rem;
+    }
+    
+    .contact-grid {
+        gap: 3rem;
+    }
+}
+
+/* 3. TABLETS (MAX 992px) */
+@media (max-width: 992px) {
+    .section-padding {
+        padding: clamp(3rem, 8vw, 6rem) 0;
+    }
+    
+    /* Hero section adjustment */
+    .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 4rem;
+        padding-top: 40px;
+    }
+    
+    .hero-left {
+        align-items: center;
+    }
+    
+    .hero-desc {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .hero-btns {
+        justify-content: center;
+    }
+    
+    .hero-socials {
+        justify-content: center;
+    }
+    
+    .hero-right {
+        order: -1; /* Place image on top on tablet/mobile */
+    }
+    
+    /* About section adjustment */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+    
+    .about-left {
+        justify-content: center;
+    }
+    
+    .about-right {
+        text-align: center;
+    }
+    
+    .about-cards-container {
+        max-width: 550px;
+        margin: 0 auto;
+    }
+    
+    .about-card {
+        text-align: left;
+    }
+    
+    /* Skills adjustment */
+    .skills-container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    /* Projects adjustment */
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 2rem;
+    }
+    
+    /* Contact adjustment */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+    
+    .contact-right {
+        order: -1; /* Info card on top on tablet/mobile */
+        max-width: 600px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+    .contact-left {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+/* 4. LARGE PHONES & SMALL TABLETS (MAX 768px) */
+@media (max-width: 768px) {
+    /* Responsive Navigation Hamburger Menu */
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 320px;
+        height: 100vh;
+        background-color: var(--dark-slate-grey);
+        border-left: 1px solid rgba(202, 210, 197, 0.15);
+        flex-direction: column;
+        justify-content: center;
+        gap: 2.5rem;
+        padding: 3rem;
+        transition: right 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+        z-index: 1000;
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.4);
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .nav-link {
+        font-size: 1.25rem;
+    }
+    
+    /* Hamburger Active Animation */
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+    
+    /* Mobile Projects Styling (Show overlay links as text buttons instead of icon overlays for better UX) */
+    .project-overlay {
+        display: none !important;
+    }
+    
+    .project-links {
+        display: flex;
+        gap: 1rem;
+        margin-top: auto;
+    }
+    
+    .project-links .btn {
+        flex: 1;
+        padding: 0.65rem 1rem;
+        font-size: 0.85rem;
+        border-radius: 8px;
+    }
+    
+    /* Education Timeline conversion to 1 column */
+    .timeline::after {
+        left: 20px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 0;
+        margin-bottom: 2.5rem;
+    }
+    
+    .timeline-item:nth-child(odd) {
+        left: 0;
+        text-align: left;
+    }
+    
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+    
+    .timeline-dot {
+        left: 10px !important;
+        right: auto !important;
+        top: 18px;
+    }
+    
+    .timeline-content {
+        padding: 1.5rem;
+    }
+    
+    /* Footer bottom adjustments */
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+}
+
+/* 5. SMALL PHONES (MAX 480px) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1.25rem;
+    }
+    
+    .hero-title {
+        letter-spacing: -1px;
+    }
+    
+    .hero-subtitle {
+        height: 38px;
+    }
+    
+    .hero-btns {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .hero-btns .btn {
+        width: 100%;
+    }
+    
+    .about-card {
+        padding: 1rem 1.25rem;
+        gap: 1rem;
+    }
+    
+    .about-card-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+    
+    .skills-category {
+        padding: 1.5rem 1.25rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 0.75rem;
+    }
+    
+    .skill-item {
+        padding: 1rem 0.5rem;
+    }
+    
+    .skill-icon {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .project-info {
+        padding: 1.25rem;
+    }
+    
+    .timeline-content {
+        padding: 1.25rem;
+    }
+    
+    .contact-form {
+        padding: 1.5rem 1rem;
+    }
+    
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+}

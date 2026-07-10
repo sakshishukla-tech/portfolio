@@ -1,0 +1,356 @@
+/* 
+========================================================================
+   ANIMATIONS.CSS - Custom Cursor, Page Loader & Creative Mesh Effects
+   Sakshi Shukla - Portfolio Website
+======================================================================== 
+*/
+
+/* 1. CUSTOM CURSOR */
+.custom-cursor {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--muted-teal);
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
+    transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+    mix-blend-mode: difference;
+}
+
+.custom-cursor-dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--muted-teal);
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.1s ease;
+}
+
+/* Hover States on Interactive Elements */
+.custom-cursor.hovered {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(132, 169, 140, 0.2);
+    border-color: #ffffff;
+}
+
+.custom-cursor.clicked {
+    transform: translate(-50%, -50%) scale(0.8);
+    background-color: var(--muted-teal);
+}
+
+/* Hide default cursor on desktops */
+@media (min-width: 993px) {
+    body, a, button, input, textarea, select, .btn, .nav-link, .social-icon {
+        cursor: none;
+    }
+}
+@media (max-width: 992px) {
+    .custom-cursor, .custom-cursor-dot {
+        display: none;
+    }
+}
+
+/* 2. PAGE LOADER */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--charcoal-blue);
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.8s cubic-bezier(0.77, 0, 0.175, 1), visibility 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+#loader.loaded {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.loader-circle {
+    width: 60px;
+    height: 60px;
+    border: 3px solid rgba(202, 210, 197, 0.1);
+    border-radius: 50%;
+    border-top-color: var(--muted-teal);
+    animation: loaderSpin 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+}
+
+.loader-text {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.loader-text span {
+    animation: loaderPulse 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes loaderSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes loaderPulse {
+    0% { opacity: 0.3; text-shadow: 0 0 5px rgba(255,255,255,0.1); }
+    100% { opacity: 1; text-shadow: 0 0 20px rgba(132, 169, 140, 0.6); }
+}
+
+/* 3. SCROLL PROGRESS BAR */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--deep-teal), var(--muted-teal));
+    width: 0%;
+    z-index: 9999;
+}
+
+/* 4. PREMIUM HERO BACKGROUND ELEMENTS */
+.hero-bg-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Mesh Gradient background overlay */
+.gradient-mesh {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 10% 20%, rgba(82, 121, 111, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(132, 169, 140, 0.1) 0%, transparent 40%);
+    filter: blur(80px);
+    z-index: 1;
+}
+
+/* Glow Circle 1 */
+.glow-circle {
+    position: absolute;
+    width: clamp(250px, 30vw, 500px);
+    height: clamp(250px, 30vw, 500px);
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(134, 169, 140, 0.15) 0%, rgba(82, 121, 111, 0) 70%);
+    filter: blur(60px);
+    z-index: 2;
+    animation: floatGlow1 20s ease-in-out infinite alternate;
+}
+
+.glow-circle-1 {
+    top: 10%;
+    right: 5%;
+}
+
+.glow-circle-2 {
+    bottom: 5%;
+    left: 5%;
+    animation-delay: -5s;
+    animation-duration: 25s;
+}
+
+/* Floating Shapes */
+.floating-shape {
+    position: absolute;
+    border: 1px solid rgba(202, 210, 197, 0.15);
+    background: rgba(53, 79, 82, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 3;
+    animation: floatShape 15s linear infinite;
+}
+
+.shape-1 {
+    width: 50px;
+    height: 50px;
+    top: 25%;
+    left: 15%;
+    border-radius: 12px;
+    animation-duration: 18s;
+}
+
+.shape-2 {
+    width: 70px;
+    height: 70px;
+    bottom: 25%;
+    right: 15%;
+    border-radius: 50%;
+    animation-duration: 22s;
+    animation-delay: -4s;
+}
+
+.shape-3 {
+    width: 40px;
+    height: 40px;
+    top: 60%;
+    left: 45%;
+    border-radius: 4px;
+    transform: rotate(45deg);
+    animation-duration: 14s;
+    animation-delay: -2s;
+}
+
+/* Floating Particles Canvas */
+#particles-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Scroll indicator bounce */
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--ash-grey);
+    opacity: 0.7;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.scroll-indicator-mouse {
+    width: 24px;
+    height: 40px;
+    border: 2px solid var(--ash-grey);
+    border-radius: 12px;
+    position: relative;
+}
+
+.scroll-indicator-wheel {
+    width: 4px;
+    height: 8px;
+    background-color: var(--muted-teal);
+    border-radius: 2px;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scrollIndicatorWheel 1.6s ease-in-out infinite;
+}
+
+/* Animations Keyframes */
+@keyframes floatGlow1 {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    50% {
+        transform: translate(50px, -30px) scale(1.1);
+    }
+    100% {
+        transform: translate(-30px, 50px) scale(0.9);
+    }
+}
+
+@keyframes floatShape {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translateY(-40px) rotate(180deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(0) rotate(360deg);
+        opacity: 0.5;
+    }
+}
+
+@keyframes scrollIndicatorWheel {
+    0% {
+        top: 6px;
+        opacity: 1;
+    }
+    50% {
+        top: 18px;
+        opacity: 0;
+    }
+    100% {
+        top: 6px;
+        opacity: 1;
+    }
+}
+
+/* GLOW OVERLAY HOVER EFFECT FOR CARDS */
+.glow-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.glow-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(800px circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(132, 169, 140, 0.12), transparent 40%);
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.glow-card:hover::before {
+    opacity: 1;
+}
+
+/* Animated Card Border Glow */
+.profile-border-glow {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, var(--deep-teal), var(--muted-teal), var(--ash-grey), var(--deep-teal));
+    border-radius: 50% 50% 40% 60% / 55% 45% 55% 45%;
+    z-index: -1;
+    filter: blur(10px);
+    animation: profileMorph 12s ease-in-out infinite alternate, borderGlow 6s linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes borderGlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
