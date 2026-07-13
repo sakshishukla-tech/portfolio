@@ -573,7 +573,7 @@ img {
     transition: all .4s ease;
 }
 .featured-project-card {
-    grid-column: span 2;
+      grid-column: span 2;
     min-height: 100%;
     border-color: rgba(199, 164, 93, 0.28);
     background: linear-gradient(135deg, rgba(53, 79, 82, 0.55), rgba(47, 62, 70, 0.72));
