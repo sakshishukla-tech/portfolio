@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Rajmahal Palace | Luxury Hotel Case Study by Sakshi Shukla</title>
+    <meta name="description"
+        content="A premium frontend and UI/UX case study for The Rajmahal Palace, a fictional ultra-luxury Indian lake palace hotel built around cinematic scrolling and editorial storytelling.">
+    <meta name="author" content="Sakshi Shukla">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="The Rajmahal Palace | Case Study">
+    <meta property="og:description"
+        content="An award-inspired luxury hotel case study covering strategy, design, development, motion, performance, and final visual storytelling.">
+    <meta property="og:image" content="images/rajmahal-hero.png">
+    <link rel="icon" type="image/png" href="images/profile.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/rajmahal-case-study.css">
+</head>
+
+<body class="case-study-body">
+    <div class="scroll-progress" id="case-scroll-bar" aria-hidden="true"></div>
+    <div class="case-cursor" id="case-cursor" aria-hidden="true"></div>
+    <div class="case-cursor-dot" id="case-cursor-dot" aria-hidden="true"></div>
+
+    <div id="case-loader" role="dialog" aria-modal="true" aria-label="Loading The Rajmahal Palace case study">
+        <div class="case-loader-mark">Rajmahal</div>
+    </div>
+
+    <header class="case-nav" id="case-nav">
+        <a href="index.html#home" class="logo" aria-label="Back to Sakshi Shukla Portfolio">Sakshi<span>.S</span></a>
+        <nav class="case-nav-links" aria-label="Case study navigation">
+            <a href="#overview">Overview</a>
+            <a href="#process">Process</a>
+            <a href="#motion">Motion</a>
+            <a href="#gallery">Gallery</a>
+        </nav>
+        <a href="index.html#projects" class="case-back-link">
+            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+            Projects
+        </a>
+    </header>
+
+    <main>
+        <section class="case-hero" aria-label="The Rajmahal Palace project hero">
+            <div class="case-hero-media" data-parallax="0.16">
+                <img src="images/rajmahal-hero.png" alt="The Rajmahal Palace floating beside a calm Indian lake at sunrise"
+                    fetchpriority="high">
+            </div>
+            <div class="case-hero-shade" aria-hidden="true"></div>
+            <div class="case-hero-content">
+                <p class="case-kicker split-text">Flagship Case Study</p>
+                <h1 class="case-hero-title split-text">The Rajmahal Palace</h1>
+                <p class="case-hero-subtitle">A cinematic digital destination for a fictional ultra-luxury Indian lake
+                    palace hotel.</p>
+                <dl class="case-hero-meta" aria-label="Project details">
+                    <div>
+                        <dt>Role</dt>
+                        <dd>Frontend Developer, UI/UX Designer</dd>
+                    </div>
+                    <div>
+                        <dt>Duration</dt>
+                        <dd>4 Weeks</dd>
+                    </div>
+                    <div>
+                        <dt>Stack</dt>
+                        <dd>HTML, CSS, JavaScript, GSAP</dd>
+                    </div>
+                    <div>
+                        <dt>Year</dt>
+                        <dd>2026</dd>
+                    </div>
+                </dl>
+            </div>
+            <a href="#overview" class="case-scroll-cue" aria-label="Scroll to project overview">
+                <span>Scroll</span>
+                <i class="fa-solid fa-arrow-down-long" aria-hidden="true"></i>
+            </a>
+        </section>
+
+        <section class="case-section case-intro" id="overview">
+            <div class="case-container">
+                <div class="case-section-label">01 / Project Overview</div>
+                <div class="case-two-column">
+                    <h2>A hospitality website designed to feel less like browsing and more like arriving.</h2>
+                    <div class="case-copy-stack">
+                        <p>The Rajmahal Palace is a fictional ultra-luxury Indian lake palace hotel. The website was
+                            conceived as a digital arrival ritual: calm, cinematic, editorial, and emotionally paced
+                            through scroll.</p>
+                        <p>It exists for discerning luxury travellers, destination wedding planners, and high-value
+                            guests who need to feel the atmosphere before they ever make an enquiry. The business goal
+                            was to increase perceived exclusivity and booking intent. The creative goal was to transform
+                            a hotel website into a story of place, heritage, and quiet indulgence.</p>
+                    </div>
+                </div>
+                <div class="case-stat-row">
+                    <div class="case-stat-card">
+                        <span>01</span>
+                        <strong>Immersive Storytelling</strong>
+                        <p>Every section was designed as a scene, not a static content block.</p>
+                    </div>
+                    <div class="case-stat-card">
+                        <span>02</span>
+                        <strong>Luxury Positioning</strong>
+                        <p>Whitespace, restraint, and pacing carry the premium brand signal.</p>
+                    </div>
+                    <div class="case-stat-card">
+                        <span>03</span>
+                        <strong>Performance First</strong>
+                        <p>Motion, imagery, and layout were planned with responsive performance in mind.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section case-dark-panel">
+            <div class="case-container case-two-column">
+                <div>
+                    <div class="case-section-label">02 / Challenge</div>
+                    <h2>Traditional hotel websites often show rooms. This one needed to make guests feel the stay.</h2>
+                </div>
+                <div class="case-copy-stack">
+                    <p>Most hotel websites rely on predictable image grids, room cards, amenity lists, and booking
+                        prompts. They communicate information, but they rarely create desire.</p>
+                    <p>The challenge was to use scrolling as a cinematic narrative device: revealing the palace slowly,
+                        pacing each space like a film sequence, and balancing visual drama with the practical clarity a
+                        real hospitality brand needs.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section" id="research">
+            <div class="case-container">
+                <div class="case-section-label">03 / Research</div>
+                <div class="case-heading-row">
+                    <h2>References were studied for their behavior, restraint, and emotional pacing.</h2>
+                    <p>The research stage focused on how premium digital products create anticipation without visual
+                        noise.</p>
+                </div>
+                <div class="research-grid">
+                    <article class="research-card">
+                        <span>Apple Product Pages</span>
+                        <h3>Precision Through Scroll</h3>
+                        <p>Apple-inspired pacing informed the idea of revealing one strong message at a time with clean
+                            transitions, confident scale, and disciplined hierarchy.</p>
+                    </article>
+                    <article class="research-card">
+                        <span>Aman Resorts</span>
+                        <h3>Quiet Luxury</h3>
+                        <p>Aman's sense of calm influenced the restrained copy, large whitespace, warm imagery, and
+                            premium hospitality tone.</p>
+                    </article>
+                    <article class="research-card">
+                        <span>Luxury Editorial Design</span>
+                        <h3>Magazine Rhythm</h3>
+                        <p>Editorial systems shaped the oversized headings, asymmetrical layouts, captions, and moments
+                            where imagery is allowed to breathe.</p>
+                    </article>
+                    <article class="research-card">
+                        <span>Awwwards</span>
+                        <h3>Memorable Interaction</h3>
+                        <p>Awwwards-style references informed the motion language: cinematic reveals, parallax depth,
+                            horizontal image movement, and hover details with purpose.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section case-process" id="process">
+            <div class="case-container">
+                <div class="case-section-label">04 / Design Process</div>
+                <h2 class="case-large-heading">From mood to motion, every decision was planned before interface polish.
+                </h2>
+                <div class="process-timeline">
+                    <article>
+                        <span>01</span>
+                        <h3>Moodboards</h3>
+                        <p>Collected references around lake palaces, marble textures, candlelight, quiet resorts, and
+                            premium editorial spreads.</p>
+                    </article>
+                    <article>
+                        <span>02</span>
+                        <h3>Wireframes</h3>
+                        <p>Mapped the story as a sequence: arrival, rooms, rituals, amenities, and final booking intent.
+                        </p>
+                    </article>
+                    <article>
+                        <span>03</span>
+                        <h3>Typography</h3>
+                        <p>Used large, confident headings with readable body copy to balance grandeur and usability.</p>
+                    </article>
+                    <article>
+                        <span>04</span>
+                        <h3>Color Palette</h3>
+                        <p>Built around ivory marble, charcoal blue, deep teal water, sage accents, and warm gold light.
+                        </p>
+                    </article>
+                    <article>
+                        <span>05</span>
+                        <h3>Grid System</h3>
+                        <p>Designed with wide editorial columns, asymmetric image placement, and generous responsive
+                            spacing.</p>
+                    </article>
+                    <article>
+                        <span>06</span>
+                        <h3>Animation Planning</h3>
+                        <p>Motion was reserved for storytelling: revealing scenes, guiding attention, and deepening
+                            spatial immersion.</p>
+                    </article>
+                    <article>
+                        <span>07</span>
+                        <h3>UI Design</h3>
+                        <p>Reduced interface chrome so imagery, type, and atmosphere could carry the experience.</p>
+                    </article>
+                    <article>
+                        <span>08</span>
+                        <h3>Final Screens</h3>
+                        <p>Created a polished responsive system for hero, arrival, suites, dining, gallery, and inquiry
+                            sections.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="identity-section" aria-label="Visual identity">
+            <div class="case-container">
+                <div class="case-section-label">05 / Visual Identity</div>
+                <div class="identity-grid">
+                    <div>
+                        <h2>Luxury through silence, proportion, and rhythm.</h2>
+                        <p>The identity system avoids loud decoration. Instead, it uses soft contrast, deliberate
+                            spacing, refined teal and ivory pairings, and editorial pacing to communicate exclusivity.
+                        </p>
+                    </div>
+                    <div class="identity-board">
+                        <div class="palette-swatch swatch-ivory"><span>Ivory Marble</span></div>
+                        <div class="palette-swatch swatch-teal"><span>Lake Teal</span></div>
+                        <div class="palette-swatch swatch-sage"><span>Muted Sage</span></div>
+                        <div class="palette-swatch swatch-gold"><span>Antique Gold</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section case-dark-panel">
+            <div class="case-container">
+                <div class="case-section-label">06 / Development</div>
+                <div class="case-heading-row">
+                    <h2>Built as a performant static frontend with premium motion layered progressively.</h2>
+                    <p>The development approach kept the architecture simple, readable, and portfolio-friendly while
+                        allowing the experience to feel cinematic.</p>
+                </div>
+                <div class="dev-grid">
+                    <article>
+                        <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                        <h3>HTML</h3>
+                        <p>Semantic sections, accessible landmarks, descriptive image alt text, and clear content order.
+                        </p>
+                    </article>
+                    <article>
+                        <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
+                        <h3>CSS</h3>
+                        <p>Responsive editorial grids, fluid spacing, custom properties, and reduced-motion fallbacks.
+                        </p>
+                    </article>
+                    <article>
+                        <i class="fa-brands fa-js" aria-hidden="true"></i>
+                        <h3>JavaScript</h3>
+                        <p>Progressive enhancements for cursor, scroll progress, reveal states, and smooth interactions.
+                        </p>
+                    </article>
+                    <article>
+                        <i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>
+                        <h3>GSAP + Lenis</h3>
+                        <p>ScrollTrigger and Lenis support pinned storytelling, horizontal galleries, and smooth scroll
+                            when available.</p>
+                    </article>
+                    <article>
+                        <i class="fa-solid fa-folder-tree" aria-hidden="true"></i>
+                        <h3>Folder Architecture</h3>
+                        <p>Assets remain inside images, global CSS stays intact, and the case study has dedicated CSS
+                            and JS files.</p>
+                    </article>
+                    <article>
+                        <i class="fa-solid fa-universal-access" aria-hidden="true"></i>
+                        <h3>Accessibility</h3>
+                        <p>Readable contrast, keyboard-friendly links, meaningful labels, and motion preferences are
+                            respected.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section motion-section" id="motion">
+            <div class="case-container">
+                <div class="case-section-label">07 / Animations</div>
+                <h2 class="case-large-heading">Motion was treated as narrative direction, not decoration.</h2>
+                <div class="motion-grid">
+                    <article><span>Hero Reveal</span>
+                        <p>Introduces the palace with a slow image scale and type reveal to create a ceremonial first
+                            impression.</p>
+                    </article>
+                    <article><span>Split Text</span>
+                        <p>Large headings enter in staggered lines so the story feels composed and premium.</p>
+                    </article>
+                    <article><span>Pinned Sections</span>
+                        <p>Key moments hold in place long enough for the user to absorb the scene before moving on.</p>
+                    </article>
+                    <article><span>Video Scrubbing</span>
+                        <p>Planned as a scroll-linked sequence for future brand films, with image parallax used as a
+                            lightweight portfolio-safe substitute.</p>
+                    </article>
+                    <article><span>Horizontal Scrolling</span>
+                        <p>The gallery moves laterally to mimic a curated editorial spread and slow down the viewing
+                            rhythm.</p>
+                    </article>
+                    <article><span>Parallax</span>
+                        <p>Subtle image movement creates spatial depth without compromising readability.</p>
+                    </article>
+                    <article><span>Magnetic Button</span>
+                        <p>Primary links respond gently to pointer movement, making interactions feel crafted.</p>
+                    </article>
+                    <article><span>Custom Cursor</span>
+                        <p>A refined cursor reinforces the bespoke nature of the experience on larger screens.</p>
+                    </article>
+                    <article><span>Section Transitions</span>
+                        <p>Soft reveals preserve the calm luxury tone while keeping the story alive.</p>
+                    </article>
+                    <article><span>Luxury Hover Effects</span>
+                        <p>Cards lift with restrained borders and glow so the UI feels tactile, not noisy.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section performance-section">
+            <div class="case-container case-two-column">
+                <div>
+                    <div class="case-section-label">08 / Performance</div>
+                    <h2>Luxury only works online when it stays smooth.</h2>
+                </div>
+                <div class="performance-list">
+                    <p><strong>Lazy loading:</strong> Non-critical gallery images load only when needed.</p>
+                    <p><strong>Intersection Observer:</strong> Reveal classes are applied progressively without heavy
+                        scroll listeners.</p>
+                    <p><strong>Video optimization:</strong> The planned video system uses poster-first loading and
+                        compressed short loops.</p>
+                    <p><strong>Reduced motion:</strong> Motion-sensitive users receive a calm, readable experience.</p>
+                    <p><strong>Safari compatibility:</strong> Effects avoid brittle filters and provide standard
+                        fallbacks.</p>
+                    <p><strong>Lighthouse optimization:</strong> Image sizing, semantic markup, and script checks keep
+                        the page production-ready.</p>
+                    <p><strong>Responsive optimization:</strong> Large compositions collapse into focused mobile
+                        sequences without losing hierarchy.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-section" id="gallery" aria-label="The Rajmahal Palace fullscreen gallery">
+            <div class="case-container">
+                <div class="case-section-label">09 / Gallery</div>
+                <h2 class="case-large-heading">A sequence of cinematic hospitality moments.</h2>
+            </div>
+            <div class="gallery-track-wrapper">
+                <div class="gallery-track" id="gallery-track">
+                    <figure class="gallery-panel">
+                        <img src="images/rajmahal-hero.png" alt="Sunrise hero view of The Rajmahal Palace" loading="lazy">
+                        <figcaption><span>Hero</span> The palace emerges through sunrise haze, setting the emotional
+                            pace before any interface appears.</figcaption>
+                    </figure>
+                    <figure class="gallery-panel">
+                        <img src="images/rajmahal-arrival.png" alt="Boat arrival at The Rajmahal Palace marble jetty"
+                            loading="lazy">
+                        <figcaption><span>Arrival</span> A slow boat approach turns check-in into a ritual of transition.
+                        </figcaption>
+                    </figure>
+                    <figure class="gallery-panel">
+                        <img src="images/rajmahal-durbar.png" alt="Durbar Hall interior with chandeliers and teal drapes"
+                            loading="lazy">
+                        <figcaption><span>Durbar Hall</span> Symmetry, chandeliers, and repeated arches create a sense
+                            of royal ceremony.</figcaption>
+                    </figure>
+                    <figure class="gallery-panel">
+                        <img src="images/rajmahal-suite.png" alt="Royal Suite overlooking the lake" loading="lazy">
+                        <figcaption><span>Royal Suite</span> Soft textiles and lake-facing arches bring intimacy into the
+                            larger palace narrative.</figcaption>
+                    </figure>
+                    <figure class="gallery-panel">
+                        <img src="images/rajmahal-pool.png" alt="Blue hour palace infinity pool beside the lake"
+                            loading="lazy">
+                        <figcaption><span>Pool</span> Blue hour color and warm lanterns shift the experience from
+                            grandeur into calm immersion.</figcaption>
+                    </figure>
+                    <figure class="gallery-panel">
+                        <img src="images/rajmahal-night.png" alt="Night finale view of The Rajmahal Palace reflected in the lake"
+                            loading="lazy">
+                        <figcaption><span>Night Finale</span> The final scene closes the story with reflection,
+                            stillness, and warm light.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section result-section">
+            <div class="case-container">
+                <div class="case-section-label">10 / Final Result</div>
+                <div class="case-two-column">
+                    <h2>The final experience positions Rajmahal as a digital palace, not just a hotel website.</h2>
+                    <div class="case-copy-stack">
+                        <p>The result is an immersive hospitality experience that combines cinematic storytelling,
+                            luxury interaction, responsive editorial layouts, and high-performance frontend execution.</p>
+                        <p>Every scroll moment is designed to guide the guest deeper into the palace: from first arrival
+                            to interiors, amenities, atmosphere, and final emotional memory.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section technologies-section">
+            <div class="case-container">
+                <div class="case-section-label">11 / Technologies Used</div>
+                <div class="tech-cloud" aria-label="Technologies used in this project">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>GSAP</span>
+                    <span>ScrollTrigger</span>
+                    <span>Lenis</span>
+                    <span>SVG</span>
+                    <span>Intersection Observer</span>
+                    <span>Responsive Design</span>
+                    <span>Performance Optimization</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section lessons-section">
+            <div class="case-container">
+                <div class="case-section-label">12 / Lessons Learned</div>
+                <div class="lessons-grid">
+                    <article>
+                        <h3>Animation Timing</h3>
+                        <p>Luxury motion needs slower pacing, gentler easing, and fewer competing elements.</p>
+                    </article>
+                    <article>
+                        <h3>Performance Optimization</h3>
+                        <p>Large imagery can feel premium only when asset loading and scroll work remain disciplined.</p>
+                    </article>
+                    <article>
+                        <h3>Frontend Architecture</h3>
+                        <p>Keeping case-study styles isolated protects the wider portfolio from accidental regressions.
+                        </p>
+                    </article>
+                    <article>
+                        <h3>Luxury UI</h3>
+                        <p>Refinement comes from proportion, restraint, contrast, and confidence in empty space.</p>
+                    </article>
+                    <article>
+                        <h3>Responsive Development</h3>
+                        <p>Desktop spectacle must translate into a focused, readable mobile story.</p>
+                    </article>
+                    <article>
+                        <h3>Storytelling</h3>
+                        <p>Strong projects become stronger when the case study explains intention, process, and outcome.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="next-project-section" aria-label="Next project">
+            <a href="index.html#projects" class="next-project-card">
+                <span>Next Project</span>
+                <strong>Spotify Clone</strong>
+                <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
+            </a>
+        </section>
+    </main>
+
+    <footer class="case-footer">
+        <a href="index.html#home" class="logo">Sakshi<span>.S</span></a>
+        <p>&copy; 2026 Sakshi Shukla. The Rajmahal Palace case study.</p>
+    </footer>
+
+    <button class="case-back-to-top" id="case-back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+    <script src="js/rajmahal-case-study.js"></script>
+</body>
+
+</html>
