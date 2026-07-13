@@ -562,7 +562,15 @@ img {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+
     height: 100%;
+    min-height: 650px;
+
+    background: rgba(47, 62, 70, 0.72);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 24px;
+
+    transition: all .4s ease;
 }
 
 .project-img-wrapper {
